@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VERTUS</title>
+  <meta name="description" content="VERTUS — Elite Gaming Center in Nukus. High-end PCs, PS5 Arena, VIP rooms, gaming tournaments." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== LOADER ========== -->
+  <div id="loader" class="loader">
+    <div class="loader__inner">
+      <div class="loader__logo">VERTUS</div>
+      <div class="loader__bar"><div class="loader__fill"></div></div>
+      <div class="loader__text">INITIALIZING SYSTEM...</div>
+    </div>
+  </div>
+
+  <!-- ========== CURSOR ========== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- ========== PARTICLES ========== -->
+  <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__logo">
+      <span class="navbar__logo-icon">⚔</span>
+      <span class="navbar__logo-text">VERTUS</span>
+    </div>
+    <nav class="navbar__nav">
+      <a href="#about" class="navbar__link">ABOUT</a>
+      <a href="#services" class="navbar__link">SERVICES</a>
+      <a href="#games" class="navbar__link">GAMES</a>
+      <a href="#gallery" class="navbar__link">GALLERY</a>
+      <a href="#pricing" class="navbar__link">PRICE</a>
+      <a href="#contact" class="navbar__link">CONTACTS</a>
+    </nav>
+    <div class="navbar__right">
+      <a href="tel:+998901234567" class="navbar__phone">+998 90 123 45 67</a>
+      <button class="btn btn--gold btn--sm navbar__cta">BOOK NOW</button>
+    </div>
+    <button class="navbar__burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-menu__link">ABOUT</a>
+    <a href="#services" class="mobile-menu__link">SERVICES</a>
+    <a href="#games" class="mobile-menu__link">GAMES</a>
+    <a href="#gallery" class="mobile-menu__link">GALLERY</a>
+    <a href="#pricing" class="mobile-menu__link">PRICE</a>
+    <a href="#contact" class="mobile-menu__link">CONTACTS</a>
+    <a href="tel:+998901234567" class="mobile-menu__phone">+998 90 123 45 67</a>
+  </div>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--1"></div>
+        <div class="hero__glow hero__glow--2"></div>
+      </div>
+      <div class="hero__content">
+        <div class="hero__left">
+          <p class="hero__subtitle reveal-text">ELITE GAMING CENTER · NUKUS</p>
+          <h1 class="hero__title">
+            <span class="hero__title-line" data-text="VERTUS">VERTUS</span>
+            <span class="hero__title-sub">GAMING</span>
+          </h1>
+          <p class="hero__desc reveal-text">Where elite technology meets the art of competition. Step into the future of gaming.</p>
+          <div class="hero__ctas">
+            <a href="#pricing" class="btn btn--outline btn--lg">
+              <span class="btn__bg"></span>
+              <span class="btn__text">BOOK NOW</span>
+            </a>
+            <a href="#pricing" class="btn btn--gold btn--lg">
+              <span class="btn__text">PRICE LIST</span>
+            </a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="30">0</span>
+              <span class="hero__stat-label">HIGH-POWERED PCs</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="240">0</span>
+              <span class="hero__stat-label">Hz MONITORS</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="150">0</span>
+              <span class="hero__stat-unit">m²</span>
+              <span class="hero__stat-label">FOR GAMING</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="24">0</span>
+              <span class="hero__stat-label">HOURS OPEN</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__right">
+          <div class="hero__warrior">
+            <div class="hero__warrior-glow"></div>
+            <div class="hero__warrior-img">
+              <!-- Warrior placeholder — replace with actual image -->
+              <div class="hero__warrior-placeholder">
+                <div class="warrior-icon">⚔</div>
+              </div>
+            </div>
+            <div class="hero__warrior-ring hero__warrior-ring--1"></div>
+            <div class="hero__warrior-ring hero__warrior-ring--2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <div class="hero__scroll-line"></div>
+        <span>SCROLL</span>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about" id="about">
+      <div class="about__corner about__corner--tl"></div>
+      <div class="about__corner about__corner--tr"></div>
+      <div class="about__corner about__corner--bl"></div>
+      <div class="about__corner about__corner--br"></div>
+      <div class="container">
+        <div class="about__content">
+          <div class="about__year-tag reveal-up">THE YEAR IS <span>2025</span></div>
+          <div class="about__text-blocks">
+            <p class="about__para reveal-up" data-delay="100">
+              Welcome to <strong>VERTUS</strong>, where luxury meets cutting-edge technology in a gaming center experience like no other. Our exclusive establishment in Nukus redefines the boundaries of what a modern gaming haven can be.
+            </p>
+            <p class="about__para reveal-up" data-delay="200">
+              We house the most advanced gaming rigs and equipment, seamlessly integrated with high-refresh displays and premium peripherals. Feel the power of tomorrow's technology at your fingertips.
+            </p>
+            <p class="about__para reveal-up" data-delay="300">
+              Our gaming rooms are immersive environments designed to transport you to other worlds. From ultra-competitive esports setups to relaxed VIP lounges — every detail is crafted for the elite gamer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ADVANTAGES ========== -->
+    <section class="advantages" id="advantages">
+      <div class="container">
+        <h2 class="section-title reveal-up" data-text="ADVANTAGES">ADVANTAGES</h2>
+        <div class="advantages__grid">
+          <div class="adv-card reveal-up" data-delay="0">
+            <div class="adv-card__header">TOP EQUIPMENT</div>
+            <div class="adv-card__body">
+              <span class="adv-card__icon">◎</span>
+              Comfortable gaming chairs, professional headphones and precision mice for every station.
+            </div>
+          </div>
+          <div class="adv-card reveal-up" data-delay="100">
+            <div class="adv-card__header">GAMING MONITORS</div>
+            <div class="adv-card__body">
+              <span class="adv-card__icon">◎</span>
+              240Hz monitors in VIP areas installed specifically for competitive tournaments.
+            </div>
+          </div>
+          <div class="adv-card reveal-up" data-delay="200">
+            <div class="adv-card__header">MODERN CONSOLES</div>
+            <div class="adv-card__body">
+              <span class="adv-card__icon">◎</span>
+              Next-generation consoles with the latest games available in our PS5 Arena zone.
+            </div>
+          </div>
+          <div class="adv-card reveal-up" data-delay="300">
+            <div class="adv-card__header">TIME COMPENSATION</div>
+            <div class="adv-card__body">
+              <span class="adv-card__icon">◎</span>
+              We will install your game and compensate for the waiting time — guaranteed.
+            </div>
+          </div>
+          <div class="adv-card reveal-up" data-delay="400">
+            <div class="adv-card__header">24-HOUR OPERATION</div>
+            <div class="adv-card__body">
+              <span class="adv-card__icon">◎</span>
+              The club is open 24 hours a day so you can play anytime you want, any day.
+            </div>
+          </div>
+          <div class="adv-card reveal-up" data-delay="500">
+            <div class="adv-card__header">COMFORTABLE GAMEPLAY</div>
+            <div class="adv-card__body">
+              <span class="adv-card__icon">◎</span>
+              Our club, made to every standard for a comfortable stay and total relaxation.
+            </div>
+          </div>
+        </div>
+        <div class="adv-card adv-card--wide reveal-up" data-delay="600">
+          <div class="adv-card__header">EVENT PARTICIPATION</div>
+          <div class="adv-card__body">
+            <span class="adv-card__icon">◎</span>
+            Tournaments are an exciting way to pass the time, compete against other competitors and maybe even win prizes. Show your skills in the game world.
+          </div>
+        </div>
+        <div class="advantages__cta reveal-up" data-delay="700">
+          <a href="#pricing" class="btn btn--outline btn--lg">
+            <span class="btn__bg"></span>
+            <span class="btn__text">BOOK NOW</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title reveal-up" data-text="SERVICES">SERVICES</h2>
+        <div class="services__tabs">
+          <button class="tab-btn tab-btn--active" data-tab="pc">PC ZONE</button>
+          <button class="tab-btn" data-tab="ps5">PS5 ARENA</button>
+          <button class="tab-btn" data-tab="vip">VIP</button>
+          <button class="tab-btn" data-tab="bootcamp">BOOTCAMPS</button>
+        </div>
+        <div class="services__panels">
+          <!-- PC Zone -->
+          <div class="services__panel services__panel--active" data-panel="pc">
+            <div class="services__media">
+              <div class="services__media-frame">
+                <div class="services__media-img services__media-img--pc">
+                  <div class="services__media-overlay"></div>
+                </div>
+              </div>
+            </div>
+            <div class="services__info">
+              <h3>FEATURES:</h3>
+              <ul class="services__list">
+                <li>Sophisticated and powerful computers</li>
+                <li>Wide Game Selection (100+ titles)</li>
+                <li>Multi-player Mode</li>
+                <li>A comfortable environment for gamers</li>
+                <li>Events and Tournaments</li>
+              </ul>
+              <div class="services__price">From <span>15,000 UZS</span> / hour</div>
+            </div>
+          </div>
+          <!-- PS5 Zone -->
+          <div class="services__panel" data-panel="ps5">
+            <div class="services__media">
+              <div class="services__media-frame">
+                <div class="services__media-img services__media-img--ps5">
+                  <div class="services__media-overlay"></div>
+                </div>
+              </div>
+            </div>
+            <div class="services__info">
+              <h3>FEATURES:</h3>
+              <ul class="services__list">
+                <li>PlayStation 5 consoles</li>
+                <li>4K OLED displays</li>
+                <li>Latest exclusive titles</li>
+                <li>Co-op and versus modes</li>
+                <li>Comfortable gaming sofas</li>
+              </ul>
+              <div class="services__price">From <span>20,000 UZS</span> / hour</div>
+            </div>
+          </div>
+          <!-- VIP Zone -->
+          <div class="services__panel" data-panel="vip">
+            <div class="services__media">
+              <div class="services__media-frame">
+                <div class="services__media-img services__media-img--vip">
+                  <div class="services__media-overlay"></div>
+                </div>
+              </div>
+            </div>
+            <div class="services__info">
+              <h3>FEATURES:</h3>
+              <ul class="services__list">
+                <li>Private enclosed rooms</li>
+                <li>Premium RGB setup</li>
+                <li>Personal mini-fridge & snacks</li>
+                <li>240Hz tournament monitors</li>
+                <li>Priority booking & support</li>
+              </ul>
+              <div class="services__price">From <span>35,000 UZS</span> / hour</div>
+            </div>
+          </div>
+          <!-- Bootcamps -->
+          <div class="services__panel" data-panel="bootcamp">
+            <div class="services__media">
+              <div class="services__media-frame">
+                <div class="services__media-img services__media-img--bootcamp">
+                  <div class="services__media-overlay"></div>
+                </div>
+              </div>
+            </div>
+            <div class="services__info">
+              <h3>FEATURES:</h3>
+              <ul class="services__list">
+                <li>Professional coaching sessions</li>
+                <li>Team strategy workshops</li>
+                <li>Dedicated tournament lanes</li>
+                <li>Stream & recording setup</li>
+                <li>Full-day training packages</li>
+              </ul>
+              <div class="services__price">From <span>100,000 UZS</span> / day</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GAMES ========== -->
+    <section class="games" id="games">
+      <div class="games__bg-deco"></div>
+      <div class="container">
+        <h2 class="section-title reveal-up" data-text="GAMES">GAMES</h2>
+        <p class="games__desc reveal-up">All the most popular games are installed on your PC, but you can run them only from your personal account in the game launcher.</p>
+        <div class="games__layout">
+          <div class="games__logos">
+            <div class="game-logo reveal-up" data-delay="0"><span class="game-logo__name">VALORANT</span></div>
+            <div class="game-logo reveal-up" data-delay="80"><span class="game-logo__name">CS2</span></div>
+            <div class="game-logo reveal-up" data-delay="160"><span class="game-logo__name">DOTA 2</span></div>
+            <div class="game-logo reveal-up" data-delay="240"><span class="game-logo__name">FORTNITE</span></div>
+            <div class="game-logo reveal-up" data-delay="320"><span class="game-logo__name">WARZONE</span></div>
+            <div class="game-logo reveal-up" data-delay="400"><span class="game-logo__name">LEAGUE OF LEGENDS</span></div>
+            <div class="game-logo reveal-up" data-delay="480"><span class="game-logo__name">APEX LEGENDS</span></div>
+            <div class="game-logo reveal-up" data-delay="560"><span class="game-logo__name">GTA V</span></div>
+          </div>
+          <div class="games__notice reveal-up" data-delay="200">
+            <div class="games__notice-header">WHAT IF MY GAME ISN'T THERE?</div>
+            <div class="games__notice-body">
+              <span class="games__notice-icon">◎</span>
+              In case any game is not on our PCs, it can be installed, and we will compensate the time spent on the installation of the game!
+            </div>
+          </div>
+        </div>
+        <div class="games__cta reveal-up">
+          <a href="#pricing" class="btn btn--outline btn--lg">
+            <span class="btn__bg"></span>
+            <span class="btn__text">BOOK NOW</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GALLERY ========== -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <h2 class="section-title reveal-up" data-text="PHOTOS">PHOTOS</h2>
+        <div class="gallery__grid">
+          <div class="gallery__item gallery__item--lg reveal-up" data-delay="0">
+            <div class="gallery__img gallery__img--1">
+              <div class="gallery__overlay">
+                <span class="gallery__zoom">+</span>
+              </div>
+            </div>
+            <div class="gallery__frame"></div>
+          </div>
+          <div class="gallery__item reveal-up" data-delay="100">
+            <div class="gallery__img gallery__img--2">
+              <div class="gallery__overlay"><span class="gallery__zoom">+</span></div>
+            </div>
+            <div class="gallery__frame"></div>
+          </div>
+          <div class="gallery__item reveal-up" data-delay="150">
+            <div class="gallery__img gallery__img--3">
+              <div class="gallery__overlay"><span class="gallery__zoom">+</span></div>
+            </div>
+            <div class="gallery__frame"></div>
+          </div>
+          <div class="gallery__item reveal-up" data-delay="200">
+            <div class="gallery__img gallery__img--4">
+              <div class="gallery__overlay"><span class="gallery__zoom">+</span></div>
+            </div>
+            <div class="gallery__frame"></div>
+          </div>
+          <div class="gallery__item reveal-up" data-delay="250">
+            <div class="gallery__img gallery__img--5">
+              <div class="gallery__overlay"><span class="gallery__zoom">+</span></div>
+            </div>
+            <div class="gallery__frame"></div>
+          </div>
+          <div class="gallery__item reveal-up" data-delay="300">
+            <div class="gallery__img gallery__img--6">
+              <div class="gallery__overlay"><span class="gallery__zoom">+</span></div>
+            </div>
+            <div class="gallery__frame"></div>
+          </div>
+          <div class="gallery__item gallery__item--see-more reveal-up" data-delay="350">
+            <div class="gallery__see-more">
+              <span>SEE</span>
+              <span>MORE</span>
+              <div class="gallery__see-more-corner gallery__see-more-corner--tl"></div>
+              <div class="gallery__see-more-corner gallery__see-more-corner--br"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PRICING ========== -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="pricing__layout">
+          <div class="pricing__label reveal-up" data-text="PRICE">PRICE</div>
+          <div class="pricing__table-wrap reveal-up" data-delay="100">
+            <table class="pricing__table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th><span class="pricing__col-header">PC ZONE</span></th>
+                  <th><span class="pricing__col-header">PS5 ARENA</span></th>
+                  <th><span class="pricing__col-header">VIP</span></th>
+                  <th><span class="pricing__col-header">BOOTCAMPS</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="pricing__row-label">1 HOUR</span></td>
+                  <td>15,000 <span class="pricing__currency">UZS</span></td>
+                  <td>20,000 <span class="pricing__currency">UZS</span></td>
+                  <td>35,000 <span class="pricing__currency">UZS</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td><span class="pricing__row-label">2 HOURS</span></td>
+                  <td>28,000 <span class="pricing__currency">UZS</span></td>
+                  <td>38,000 <span class="pricing__currency">UZS</span></td>
+                  <td>65,000 <span class="pricing__currency">UZS</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td><span class="pricing__row-label">3 HOURS</span></td>
+                  <td>40,000 <span class="pricing__currency">UZS</span></td>
+                  <td>55,000 <span class="pricing__currency">UZS</span></td>
+                  <td>90,000 <span class="pricing__currency">UZS</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td><span class="pricing__row-label">5 HOURS</span></td>
+                  <td>60,000 <span class="pricing__currency">UZS</span></td>
+                  <td>85,000 <span class="pricing__currency">UZS</span></td>
+                  <td>140,000 <span class="pricing__currency">UZS</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td><span class="pricing__row-label">7 HOURS</span></td>
+                  <td>80,000 <span class="pricing__currency">UZS</span></td>
+                  <td>110,000 <span class="pricing__currency">UZS</span></td>
+                  <td>190,000 <span class="pricing__currency">UZS</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td><span class="pricing__row-label">10 HOURS</span></td>
+                  <td>110,000 <span class="pricing__currency">UZS</span></td>
+                  <td>150,000 <span class="pricing__currency">UZS</span></td>
+                  <td>260,000 <span class="pricing__currency">UZS</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td><span class="pricing__row-label">NIGHT</span></td>
+                  <td>90,000 <span class="pricing__currency">UZS</span></td>
+                  <td>120,000 <span class="pricing__currency">UZS</span></td>
+                  <td>220,000 <span class="pricing__currency">UZS</span></td>
+                  <td>—</td>
+                </tr>
+                <tr>
+                  <td><span class="pricing__row-label">DAY</span></td>
+                  <td>150,000 <span class="pricing__currency">UZS</span></td>
+                  <td>200,000 <span class="pricing__currency">UZS</span></td>
+                  <td>350,000 <span class="pricing__currency">UZS</span></td>
+                  <td>100,000 <span class="pricing__currency">UZS</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="pricing__cta reveal-up">
+          <a href="#contact" class="btn btn--outline btn--lg">
+            <span class="btn__bg"></span>
+            <span class="btn__text">BOOK NOW</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2 class="section-title reveal-up" data-text="REVIEWS">REVIEWS</h2>
+        <div class="testimonials__slider" id="testimonialSlider">
+          <div class="testimonials__track" id="testimonialTrack">
+            <div class="testimonial-card">
+              <div class="testimonial-card__quote">"</div>
+              <p class="testimonial-card__text">The best gaming center in Nukus — no question. The PCs are incredibly powerful and the atmosphere is unlike anything else in the city. VERTUS is on another level.</p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">AB</div>
+                <div>
+                  <div class="testimonial-card__name">Azizbek B.</div>
+                  <div class="testimonial-card__role">Professional Gamer</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-card__quote">"</div>
+              <p class="testimonial-card__text">VIP room experience was absolutely premium. The 240Hz monitors, comfortable chairs, and private space made our tournament practice session perfect.</p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">DM</div>
+                <div>
+                  <div class="testimonial-card__name">Dilnoza M.</div>
+                  <div class="testimonial-card__role">Esports Team Captain</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-card__quote">"</div>
+              <p class="testimonial-card__text">I came for the PS5 Arena and stayed for 6 hours. The setup is incredible, the staff are friendly and professional. Highly recommend VERTUS to every gamer.</p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">RK</div>
+                <div>
+                  <div class="testimonial-card__name">Rustam K.</div>
+                  <div class="testimonial-card__role">Console Enthusiast</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-card__quote">"</div>
+              <p class="testimonial-card__text">The bootcamp session with my team was a game changer. Professional streaming setup, dedicated lanes, and coaching support made all the difference.</p>
+              <div class="testimonial-card__author">
+                <div class="testimonial-card__avatar">SK</div>
+                <div>
+                  <div class="testimonial-card__name">Sardor K.</div>
+                  <div class="testimonial-card__role">CS2 Team Leader</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__controls">
+          <button class="testimonials__btn" id="testimPrev">←</button>
+          <div class="testimonials__dots" id="testimDots"></div>
+          <button class="testimonials__btn" id="testimNext">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title reveal-up" data-text="CONTACT">CONTACT</h2>
+        <div class="contact__layout">
+          <div class="contact__form-wrap reveal-up">
+            <form class="contact__form" id="contactForm">
+              <div class="form-group">
+                <label class="form-label">YOUR NAME</label>
+                <input type="text" class="form-input" placeholder="Enter your name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">PHONE / EMAIL</label>
+                <input type="text" class="form-input" placeholder="+998 XX XXX XX XX" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">SERVICE</label>
+                <select class="form-input form-select">
+                  <option value="">Select a zone</option>
+                  <option>PC ZONE</option>
+                  <option>PS5 ARENA</option>
+                  <option>VIP ROOM</option>
+                  <option>BOOTCAMP</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">MESSAGE</label>
+                <textarea class="form-input form-textarea" placeholder="Tell us about your visit..."></textarea>
+              </div>
+              <button type="submit" class="btn btn--gold btn--lg btn--full">
+                <span class="btn__text">SEND MESSAGE</span>
+              </button>
+            </form>
+          </div>
+          <div class="contact__info reveal-up" data-delay="200">
+            <div class="contact__info-block">
+              <div class="contact__info-icon">◎</div>
+              <div>
+                <div class="contact__info-label">PHONE</div>
+                <a href="tel:+998901234567" class="contact__info-value">+998 90 123 45 67</a>
+              </div>
+            </div>
+            <div class="contact__info-block">
+              <div class="contact__info-icon">◎</div>
+              <div>
+                <div class="contact__info-label">EMAIL</div>
+                <a href="mailto:info@vertus.uz" class="contact__info-value">info@vertus.uz</a>
+              </div>
+            </div>
+            <div class="contact__info-block">
+              <div class="contact__info-icon">◎</div>
+              <div>
+                <div class="contact__info-label">ADDRESS</div>
+                <span class="contact__info-value">Nukus, Karakalpakstan, Uzbekistan</span>
+              </div>
+            </div>
+            <div class="contact__info-block">
+              <div class="contact__info-icon">◎</div>
+              <div>
+                <div class="contact__info-label">WORKING HOURS</div>
+                <span class="contact__info-value">24/7 — Always Open</span>
+              </div>
+            </div>
+            <div class="contact__map">
+              <div class="contact__map-placeholder">
+                <span class="contact__map-icon">⊕</span>
+                <span>Nukus, Uzbekistan</span>
+              </div>
+            </div>
+            <div class="contact__socials">
+              <a href="#" class="contact__social" aria-label="Instagram">IG</a>
+              <a href="#" class="contact__social" aria-label="Telegram">TG</a>
+              <a href="#" class="contact__social" aria-label="YouTube">YT</a>
+              <a href="#" class="contact__social" aria-label="TikTok">TK</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <div class="footer__warrior-icon">⚔</div>
+        <div>
+          <div class="footer__brand">VERTUS</div>
+          <div class="footer__tagline">ELITE GAMING CENTER</div>
+        </div>
+      </div>
+      <div class="footer__center">
+        <div class="footer__contact-row">
+          <span class="footer__contact-icon">◎</span>
+          <a href="tel:+998901234567">+998 90 123 45 67</a>
+        </div>
+        <div class="footer__contact-row">
+          <span class="footer__contact-icon">◎</span>
+          <a href="mailto:info@vertus.uz">info@vertus.uz</a>
+        </div>
+        <div class="footer__contact-row">
+          <span class="footer__contact-icon">◎</span>
+          <span>Nukus, Karakalpakstan</span>
+        </div>
+        <div class="footer__hours">
+          <span class="footer__hours-label">WORKING HOURS</span>
+          <span>MON–SUN: 24/7 — Always Open</span>
+        </div>
+      </div>
+      <div class="footer__right">
+        <div class="footer__socials">
+          <a href="#" class="footer__social">IG</a>
+          <a href="#" class="footer__social">TG</a>
+          <a href="#" class="footer__social">YT</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2025 VERTUS Gaming Center. All Rights Reserved.</span>
+      <div class="footer__links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

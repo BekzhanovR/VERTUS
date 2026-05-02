@@ -1,0 +1,156 @@
+// ============================================================
+// VERTUS GAMING CENTER — style.scss
+// This is the SCSS source. Compiled output is in css/style.css
+// ============================================================
+
+// ========== VARIABLES ==========
+$gold: #c9a84c;
+$gold-light: #e8c97a;
+$gold-dark: #8a6a1f;
+$gold-glow: rgba(201, 168, 76, 0.4);
+$black: #0a0a0a;
+$dark: #111111;
+$dark-2: #1a1a1a;
+$dark-3: #222222;
+$white: #ffffff;
+$text: #cccccc;
+$text-dim: #888888;
+$border: rgba(201, 168, 76, 0.2);
+$border-hover: rgba(201, 168, 76, 0.6);
+
+$font-title: 'Orbitron', sans-serif;
+$font-body: 'Rajdhani', sans-serif;
+$font-mono: 'Share Tech Mono', monospace;
+
+$transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+$radius: 2px;
+$container: 1280px;
+$gutter: 2rem;
+
+// ========== MIXINS ==========
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin clip-skew($size: 8px) {
+  clip-path: polygon(#{$size} 0%, 100% 0%, calc(100% - #{$size}) 100%, 0% 100%);
+}
+
+@mixin clip-corner($size: 12px) {
+  clip-path: polygon(0 0, calc(100% - #{$size}) 0, 100% #{$size}, 100% 100%, #{$size} 100%, 0 calc(100% - #{$size}));
+}
+
+@mixin gold-border {
+  border: 1px solid $border;
+  &:hover { border-color: $border-hover; }
+}
+
+@mixin gold-glow-shadow($intensity: 0.1) {
+  box-shadow: 0 0 30px rgba(201, 168, 76, $intensity), inset 0 0 30px rgba(201, 168, 76, $intensity * 0.3);
+}
+
+@mixin glass-bg {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+}
+
+@mixin font-title($size: 1rem, $weight: 700) {
+  font-family: $font-title;
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@mixin font-mono($size: 0.75rem) {
+  font-family: $font-mono;
+  font-size: $size;
+  letter-spacing: 0.1em;
+}
+
+@mixin reveal-animation {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin gold-gradient {
+  background: linear-gradient(135deg, $gold-dark, $gold, $gold-light);
+}
+
+// ========== RESPONSIVE BREAKPOINTS ==========
+@mixin mobile { @media (max-width: 480px) { @content; } }
+@mixin tablet { @media (max-width: 768px) { @content; } }
+@mixin laptop { @media (max-width: 1100px) { @content; } }
+@mixin desktop { @media (min-width: 1440px) { @content; } }
+
+// ========== ANIMATIONS ==========
+@keyframes loaderPulse {
+  0%, 100% { text-shadow: 0 0 20px $gold-glow; }
+  50% { text-shadow: 0 0 60px $gold, 0 0 100px $gold-glow; }
+}
+
+@keyframes loaderFill {
+  to { width: 100%; }
+}
+
+@keyframes loaderBlink {
+  50% { opacity: 0; }
+}
+
+@keyframes gridShift {
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+@keyframes glowFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -30px) scale(1.1); }
+}
+
+@keyframes heroTitleIn {
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes warriorFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes ringRotate {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@keyframes rippleEffect {
+  to { transform: translate(-50%, -50%) scale(80); opacity: 0; }
+}
+
+@keyframes scanline {
+  0% { top: -200px; }
+  100% { top: 100%; }
+}
+
+@keyframes statFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+// ========== NOTE ==========
+// The compiled CSS output is in css/style.css
+// To compile this SCSS file, run:
+//   npm install -g sass
+//   sass style.scss css/style.css --watch
+// Or use a VS Code extension like "Live Sass Compiler"
